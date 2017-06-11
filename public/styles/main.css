@@ -1,0 +1,30 @@
+.photoData {
+  width: 12em;
+  height: 18em;
+  /*display: inline;*/
+}
+
+.descriptionData {
+  width: 10em;
+  height: 17em;
+  margin-top: -0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2em;
+}
+
+.galleryArea {
+  width: 12em;
+  height: 19em;
+  margin: 2em;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.tr {
+  display: inline-block;
+}
+
+.loveButton {
+  width: 12em;
+}
