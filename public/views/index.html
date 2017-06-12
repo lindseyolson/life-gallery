@@ -11,7 +11,7 @@
   <body ng-app='myApp'>
     <h1>PHOTO GALLERY</h1>
     <h2>By: Lindsey Olson</h3>
-    <div id='entireGallery' ng-controller='GalleryController as gc'>
+    <div class='entireGallery' ng-controller='GalleryController as gc'>
         <div class='galleryArea' ng-repeat='photo in gc.photoArr' >
             <img class='photoData' ng-src='{{ photo.url }}' ng-hide='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv' ng-hide='gc.showComments'/>
             <p class='descriptionData' ng-show='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv'>{{ photo.description }}</p>
