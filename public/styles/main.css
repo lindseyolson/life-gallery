@@ -1,24 +1,57 @@
+h1 {
+  font-family: 'Overpass', sans-serif;
+  text-align: center;
+  margin-top: 1.5em;
+  padding-bottom: -2em;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+h2 {
+  font-family: 'Overpass', sans-serif;
+  text-align: center;
+  margin-top: -1em;
+  color: #737373;
+}
+
+input {
+  width: 16.25em;
+  /*display: inline-block;*/
+  position: relative;
+  float: left;
+}
+
+body {
+  height: 70em;
+}
+
 .photoData {
-  width: 12em;
+  width: 18em;
   height: 18em;
-  /*display: inline;*/
+  padding-top: 1em;
+  margin-bottom: -3em;
 }
 
 .descriptionData {
   width: 10em;
-  height: 17em;
-  margin-top: -0.25em;
-  padding-left: 1em;
-  padding-right: 1em;
+  height: 12em;
   padding-top: 2em;
+  padding-right: 2em;
+  padding-left: 2em;
+  background-color: #e6e6e6;
+  font-size: 20px;
+  font-family: 'EB Garamond', serif;
+  margin-bottom: -2em;
 }
 
 .galleryArea {
-  width: 12em;
-  height: 19em;
+  width: 18em;
+  height: 24em;
   margin: 2em;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #bfbfbf;
+  padding-left: 1em;
+  padding-right: 1em;
+  align-items: center;
 }
 
 .tr {
@@ -26,5 +59,31 @@
 }
 
 .loveButton {
-  width: 12em;
+  width: 5em;
+  display: inline-block;
+  /*font-family: 'Overpass', sans-serif;*/
+  /*float:right;*/
+}
+
+.viewButton {
+  margin-top: 1em;
+  margin-left: 8em;
+
+}
+
+.addButton {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: 1em;
+}
+
+#loveCount {
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'EB Garamond', serif;
+  color: white;
+  padding-left: 0.5em;
+  /*background-color: black;*/
+  /*margin-top: -4em;*/
 }

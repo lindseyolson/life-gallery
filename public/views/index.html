@@ -2,33 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|EB+Garamond|Overpass" rel="stylesheet">
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
     <link rel="stylesheet" href="styles/main.css">
     <title>Lindsey's Gallery</title>
   </head>
   <body ng-app='myApp'>
-    <h1>Lindsey's Gallery</h1>
+    <h1>PHOTO GALLERY</h1>
+    <h2>By: Lindsey Olson</h3>
     <div ng-controller='GalleryController as gc'>
       <table>
         <tr class='tr' ng-repeat='photo in gc.photoArr' >
           <td class='galleryArea'>
-            <img class='photoData' ng-src='{{photo.photo}}' ng-hide='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv'/>
+            <img class='photoData' ng-src='{{ photo.url }}' ng-hide='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv' ng-hide='gc.showComments'/>
             <p class='descriptionData' ng-show='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv'>{{ photo.description }}</p>
-            <button class='loveButton' ng-click='gc.loveIt()'>Love it!</button>
-            </td>
+            <span id='heart'></span>
+            <p id='loveCount'>loves: {{  photo.loves  }}</p>
+            <button class='loveButton' ng-click='gc.loves($index)'>Love it!</button> </br>
+            <input type='text' ng-model='gc.comment' placeholder='comment' />
+            <button class='addButton' ng-click='gc.addComment(gc.comment, $index)'>Add Comment</button>
+            <button class='viewButton' ng-click='gc.viewComments($index)' ng-hide='gc.showComments'>View Comments</button>
+            <p ng-show='gc.showComments' ng-repeat='comment in gc.photoArr'> {{ comment  }}</p>
+            <button ng-click='gc.viewComments($index)' ng-show='gc.showComments'>Hide</button>
+          </td>
         </tr>
       </table>
-      <!-- <div ng-repeat='photo in gc.photoArr' class='imageDiv'>
-        <img ng-src='{{photo.photo}}' ng-hide='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv' class='pics'/>
-        <p ng-show='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv' class='description'>{{ photo.description }}</p>
-      </div> -->
 
-
-      <!-- <div ng-repeat='photo in gc.photoArr' class='imageDiv'>
-        <img ng-src='{{photo.photo}}' ng-show='gc.showPhoto' ng-click='gc.showToggle($index)' class='pics'/>
-        <p ng-hide='gc.showPhoto' ng-click='gc.showToggle($index)'>{{ photo.description }}</p>
-      </div> -->
       </div>
     </div>
   </body>
