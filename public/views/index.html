@@ -17,10 +17,11 @@
             <p class='descriptionData' ng-show='hiddenDiv' ng-click='hiddenDiv =!hiddenDiv'>{{ photo.description }}</p>
             <p id='loveCount'>loves: {{  photo.loves  }}</p>
             <button class='loveButton' ng-click='gc.loves($index)'>Love it!</button> </br>
-            <input type='text' ng-model='gc.comment' placeholder='comment' />
-            <button class='addButton' ng-click='gc.addComment(gc.comment, $index)'>Add Comment</button>
+            <input type='text' ng-model='comment' placeholder='comment' />
+            <button class='addButton' ng-click='gc.addComment(comment, $index)'>Add Comment</button>
             <button class='viewButton' ng-click='gc.viewComments($index)' ng-hide='gc.showComments'>View Comments</button>
-            <!-- <p ng-show='gc.showComments' ng-repeat='comment in gc.photoArr'> {{ comment  }}</p> -->
+            <p ng-show='gc.showComments' > </p>
+            <p ng-repeat='x in Photo.commentsArr'>{{ x }}</p>
             <!-- <button ng-click='gc.viewComments($index)' ng-show='gc.showComments'>Hide</button> -->
       </div>
     </div>

@@ -28,7 +28,7 @@ myApp.controller('GalleryController', function(){
 
   vm.addComment = function(comment, index) {
     vm.photoArr[index].commentsArr.push(comment);
-    vm.comment='';
+    comment = vm.comment='';
     console.log(vm.photoArr[index].commentsArr);
   } // end addComment
 
